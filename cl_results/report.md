@@ -15,23 +15,26 @@
 
 ### Final Performance Rankings
 3. **Naive**: 12.83%
+9. **Clear**: 11.67%
 6. **Frozen Backbone**: 10.50%
 
 ### Forgetting Analysis
 
 - **Naive**: 0.0000
 - **Frozen Backbone**: 0.0000
+- **Clear**: 0.0000
 
 ### Training Efficiency
 
+- **Clear**: 0.00 minutes
 - **Frozen Backbone**: 0.00 minutes
 - **Naive**: 0.00 minutes
 
 ## Key Findings
 
 1. **Best Overall Performance**: Naive achieved 12.83% accuracy
-2. **Most Stable (Least Forgetting)**: Frozen Backbone showed minimal catastrophic forgetting
-3. **Most Efficient**: Frozen Backbone had the fastest training time
+2. **Most Stable (Least Forgetting)**: Clear showed minimal catastrophic forgetting
+3. **Most Efficient**: Clear had the fastest training time
 4. **Best Accuracy-Efficiency Trade-off**: Naive
 
 ## Detailed Analysis
@@ -50,6 +53,12 @@
 - **Total Training Time**: 0.00 minutes
 - **Learning Curve**: Relatively stable
 
+#### Clear
+- **Final Accuracy**: 11.67%
+- **Forgetting**: 0.0000
+- **Total Training Time**: 0.00 minutes
+- **Learning Curve**: Improving over time
+
 ## Recommendations
 
 ### Use Case Recommendations
@@ -67,7 +76,7 @@
    - Accept higher computational cost for 12.83% accuracy
 
 4. **For Minimal Forgetting**:
-   - Use **Frozen Backbone** strategy
+   - Use **Clear** strategy
    - Best for scenarios where retaining old knowledge is critical
 
 ### Hyperparameter Tuning Suggestions

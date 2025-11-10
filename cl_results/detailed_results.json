@@ -6,9 +6,15 @@
       "naive",
       "frozen_backbone",
       "frozen_backbone",
-      "frozen_backbone"
+      "frozen_backbone",
+      "clear",
+      "clear",
+      "clear"
     ],
     "Task": [
+      1,
+      2,
+      3,
       1,
       2,
       3,
@@ -22,7 +28,10 @@
       12.833333333333334,
       11.5,
       10.5,
-      10.5
+      10.5,
+      8.5,
+      11.5,
+      11.666666666666666
     ]
   }
 }

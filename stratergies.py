@@ -10,6 +10,7 @@ from torch.optim import AdamW
 from avalanche.training.strategies import Naive, EWC
 from avalanche.training.plugins import ReplayPlugin
 from avalanche.training.storage import ClassBalancedBuffer
+from clear_plugin import ClearReplayPlugin
 from avalanche.evaluation.metrics import accuracy_metrics, forgetting_metrics, bwt_metrics
 from avalanche.logging import InteractiveLogger
 from avalanche.training.plugins import EvaluationPlugin
@@ -151,6 +152,27 @@ def create_strategy(strategy_name: str, model, config: ExperimentConfig, evaluat
         return Naive(
             model, optimizer, criterion, 
             plugins=[replay], 
+            **base_kwargs
+        )
+    
+    elif strategy_name == "clear_replay":
+        print(f"→ Strategy: CLEAR (Replay + Stored-Logits + Distillation, mem={config.memory_size})")
+        storage_policy = ClassBalancedBuffer(
+            max_size=config.memory_size,
+            adaptive_size=True
+        )
+
+        # Use our CLEAR plugin which extends replay with stored logits + distillation
+        clear = ClearReplayPlugin(
+            mem_size=config.memory_size,
+            storage_policy=storage_policy,
+            clear_lambda=getattr(config, 'clear_lambda', 1.0),
+            temperature=getattr(config, 'clear_temperature', 2.0)
+        )
+
+        return Naive(
+            model, optimizer, criterion,
+            plugins=[clear],
             **base_kwargs
         )
     

@@ -97,6 +97,7 @@ def run_experiment(config):
         "naive",           # Baseline: shows maximum forgetting
         "ewc",             # Classic regularization approach
         "replay_balanced", # Memory-based approach
+        "clear_replay",    # CLEAR: replay + stored logits + distillation
         "lora",            # Parameter-efficient approach
         "hybrid_lora",     # Novel: combines multiple techniques
         "frozen_backbone"  # Representation-based approach
