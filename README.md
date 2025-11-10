@@ -1,11 +1,11 @@
-# Advanced Continual Learning Framework 🧠
+# Advanced Continual Learning Framework 
 
 A comprehensive research framework for evaluating continual learning strategies on vision transformers, with a focus on mitigating catastrophic forgetting through modern parameter-efficient techniques.
 
 
 ---
 
-## 📋 Table of Contents
+##  Table of Contents
 
 - [Overview](#overview)
 - [Key Features](#key-features)
@@ -22,7 +22,7 @@ A comprehensive research framework for evaluating continual learning strategies 
 
 ---
 
-## 🎯 Overview
+##  Overview
 
 This framework implements and compares six state-of-the-art continual learning strategies for vision transformers on the SplitCIFAR-100 benchmark. The project addresses the fundamental challenge of **catastrophic forgetting** - where neural networks forget previously learned tasks when learning new ones.
 
@@ -38,7 +38,7 @@ Our framework provides multiple solutions to this critical problem through moder
 
 ---
 
-## ✨ Key Features
+##  Key Features
 
 ### 🔬 **Six Continual Learning Strategies**
 - **Naive Fine-tuning**: Baseline demonstrating forgetting
@@ -48,19 +48,19 @@ Our framework provides multiple solutions to this critical problem through moder
 - **Hybrid LoRA**: Novel combination (LoRA + Replay + Distillation)
 - **Frozen Backbone**: Linear probing approach
 
-### 🚀 **Modern Architecture**
+###  **Modern Architecture**
 - Vision Transformer (ViT-B/16) backbone
 - Pre-trained on ImageNet-21k
 - Parameter-efficient fine-tuning
 - Mixed precision training support
 
-### 📊 **Comprehensive Analysis**
+### **Comprehensive Analysis**
 - 6-panel visualization dashboard
 - Detailed performance metrics (accuracy, forgetting, efficiency)
 - Markdown reports with recommendations
 - Task-wise heatmaps and learning curves
 
-### ⚡ **Production-Ready**
+###  **Production-Ready**
 - Configurable experiment management
 - GPU acceleration with mixed precision
 - Reproducible experiments (fixed seeds)
@@ -68,7 +68,7 @@ Our framework provides multiple solutions to this critical problem through moder
 
 ---
 
-## 🛠️ Installation
+##  Installation
 
 ### Prerequisites
 
@@ -106,7 +106,7 @@ numpy>=1.23.0
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Basic Usage
 
@@ -159,7 +159,7 @@ cl_results/
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ### System Design
 
@@ -216,7 +216,7 @@ Input Image (224x224x3)
 
 ---
 
-## 📚 Continual Learning Strategies
+##  Continual Learning Strategies
 
 ### 1. Naive Fine-tuning (Baseline)
 
@@ -361,7 +361,7 @@ L_distill = KL(softmax(z_new/T) || softmax(z_old/T)) × T²
 
 ---
 
-## ⚙️ Configuration
+##  Configuration
 
 ### ExperimentConfig Class
 
@@ -421,7 +421,7 @@ create_visualizations(df, results, config)
 
 ---
 
-## 📊 Results & Analysis
+##  Results & Analysis
 
 ### Visualization Dashboard
 
@@ -468,7 +468,7 @@ From the provided experiment:
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 continual-learning-framework/
@@ -504,7 +504,7 @@ continual-learning-framework/
 
 ---
 
-## 🔬 Advanced Usage
+## Advanced Usage
 
 ### Custom Strategies
 
@@ -597,7 +597,7 @@ if torch.cuda.device_count() > 1:
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 We welcome contributions! Here's how you can help:
 
@@ -643,7 +643,7 @@ flake8 .
 
 ---
 
-## 📖 Citation
+##  Citation
 
 If you use this framework in your research, please cite:
 
@@ -666,13 +666,13 @@ This framework implements techniques from:
 
 ---
 
-## 📄 License
+##  License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - **Avalanche**: Continual Learning library
 - **timm**: PyTorch Image Models
@@ -709,7 +709,7 @@ From the experimental runs on SplitCIFAR-100 (3 tasks):
 *Note: These are demo results with minimal training for illustration purposes. Full experiments with complete training typically achieve 60-80% accuracy on SplitCIFAR-100 with 5 tasks.*
 
 
-## 📧 Contact
+##  Contact
 
 - **Issues**: [GitHub Issues](https://github.com/yourusername/continual-learning-framework/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/yourusername/continual-learning-framework/discussions)
@@ -717,7 +717,7 @@ From the experimental runs on SplitCIFAR-100 (3 tasks):
 
 ---
 
-## 🗺️ Roadmap
+##  Roadmap
 
 ### Coming Soon
 
@@ -731,4 +731,4 @@ From the experimental runs on SplitCIFAR-100 (3 tasks):
 
 ---
 
-**Happy Continual Learning! 🚀**
+**Happy Continual Learning! **
